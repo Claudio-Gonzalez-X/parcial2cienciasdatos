@@ -1,0 +1,56 @@
+# Here you can define all your datasets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/catalog-data/introduction/#data-catalog
+
+# ── RAW DATASETS ──────────────────────────────────────────────────────────────
+
+employee_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/employee_data.csv
+
+employee_engagement_survey_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/employee_engagement_survey_data.csv
+
+recruitment_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/recruitment_data.csv
+
+training_and_development_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/01_raw/training_and_development_data.csv
+
+# ── INTERMEDIATE DATASETS ───────────────────────────────────────────────────
+
+cleaned_employee_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/02_intermediate/cleaned_employee_data.csv
+
+cleaned_engagement_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/02_intermediate/cleaned_engagement_data.csv
+
+cleaned_recruitment_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/02_intermediate/cleaned_recruitment_data.csv
+
+cleaned_training_data:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/02_intermediate/cleaned_training_data.csv
+
+# ── PRIMARY DATASETS ────────────────────────────────────────────────────────
+
+master_table:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/03_primary/master_table.csv
+
+# ── REPORTING DATASETS ───────────────────────────────────────────────────────
+
+quality_report:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/08_reporting/quality_report.csv
+
+initial_diagnostic_report:
+  type: kedro_datasets.pandas.CSVDataset
+  filepath: data/08_reporting/initial_diagnostic_report.csv

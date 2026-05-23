@@ -1,0 +1,46 @@
+cleaning:
+  date_columns:
+    - StartDate
+    - ExitDate
+    - DOB
+    - Application Date
+    - Date of Birth
+  string_columns:
+    - FirstName
+    - LastName
+    - Title
+    - Supervisor
+    - ADEmail
+    - BusinessUnit
+    - EmployeeStatus
+    - EmployeeType
+    - PayZone
+    - EmployeeClassificationType
+    - TerminationType
+    - TerminationDescription
+    - DepartmentType
+    - Division
+    - State
+    - JobFunctionDescription
+    - RaceDesc
+    - MaritalDesc
+    - "Performance Score"
+    - "First Name"
+    - "Last Name"
+    - Gender
+    - City
+    - Country
+    - "Education Level"
+    - "Job Title"
+    - Status
+  outlier_columns:
+    - "Current Employee Rating"
+    - "Years of Experience"
+    - "Desired Salary"
+    - "Training Duration(Days)"
+    - "Training Cost"
+  imputation:
+    numeric_strategy: median
+    categorical_strategy: mode
+    constant_value: "Desconocido"
+  iqr_multiplier: 1.5
